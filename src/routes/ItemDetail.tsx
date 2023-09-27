@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Item } from '../types'
 import '../styles/ItemDetail.css'
+import { AddToBasket, AddToRecentlyViewed, AddToWishlist, RemoveFromWishlist } from '../LocalStorageFunction'
 
 const ItemDetail = () => {
   const param = useParams()
   const itemId = param.productId
   const [item, setItems] = React.useState<Item>()
   const [imageSelected, setImageSelected] = React.useState<string>()
-  const [amount, setAmount] = React.useState<number>(1)
   const [fav, setFav] = React.useState(false)
 
   const toggleHeart = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -16,10 +16,12 @@ const ItemDetail = () => {
       setFav(false)
       e.currentTarget.children[0].classList.remove('fa-solid')
       e.currentTarget.children[0].classList.add('fa-regular')
+      RemoveFromWishlist(item!.id)
     } else {
       setFav(true)
       e.currentTarget.children[0].classList.remove('fa-regular')
       e.currentTarget.children[0].classList.add('fa-solid')
+      AddToWishlist(item!)
     }
   }
 
@@ -44,6 +46,7 @@ const ItemDetail = () => {
           myJson.forEach((item: Item) => {
             if (item.id === itemId) {
               setItems(item)
+              AddToRecentlyViewed(item)
               setImageSelected(item.image[0])
             }
           })
@@ -96,18 +99,10 @@ const ItemDetail = () => {
           <p>SHIPPING</p>
           <div className='option'>Standard (Free)</div>
         </div>
-        <div className="item-option">
-          <p>QUANTITY</p>
-          <div className='quantity-div'>
-            <button>-</button>
-            <input type="text" value={amount} className="quantity"/>
-            <button>+</button>
-          </div>
-        </div>
         <hr />
         <div className='buy-fav'>
-          <button>Buy now</button>
-          <button className='secondary-button'>Add to basket</button>
+          <button onClick={() => AddToBasket(item!)}>Buy now</button>
+          <button className='secondary-button' onClick={() => AddToBasket(item!)}>Add to basket</button>
         </div>
       </div>
     </div>

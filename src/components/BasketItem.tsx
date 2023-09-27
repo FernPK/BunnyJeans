@@ -1,41 +1,52 @@
 import { BasketItemType } from '../types'
 import '../styles/BasketItem.css'
+import { RemoveFromBasket, UpdateBasket } from '../LocalStorageFunction'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function BasketItem(props: BasketItemType) {
   const [amount, setAmount] = React.useState<number>(props.amount)
 
   const increaseAmount = () => {
+    updateBasket(amount + 1)
     setAmount((amount) => amount + 1)
-    // console.log(amount)
   }
 
   const decreaseAmount = () => {
+    updateBasket(amount - 1)
     setAmount((amount) => amount - 1)
-    // console.log(amount)
   }
 
   const changeAmount = (e: React.ChangeEvent<HTMLInputElement>) => {
+    updateBasket(Number(e.target.value))
     setAmount(Number(e.target.value))
-    // console.log(amount)
+  }
+
+  const updateBasket = (newAmount: number) => {
+    if (newAmount > 0) {
+      UpdateBasket(props.id, newAmount)
+    }
+    else if (newAmount === 0) {
+      RemoveFromBasket(props.id)
+    }
   }
 
   return (
     <tr className='basket-item-row'>
       <td>
-        <div className='basket-item'>
-          <img src={props.image} alt={props.name} />
-          <div className='basket-item-detail'>
-            <em className='item-name'>{props.name}</em>
-            <p>Product Code: {props.id}</p>
-            <p>Colour: {props.color}</p>
-            <p>Size: One Size 20 x 20 cm</p>
-            <div className='item-stock'>
-              <i className="fa-solid fa-circle-check"></i>
-              <p>In Stock</p>
+        <Link to={`/products/${props.id}`}>
+          <div className='basket-item'>
+            <img src={props.image} alt={props.name} />
+            <div className='basket-item-detail'>
+              <em className='item-name'>{props.name}</em>
+              <p>Size: 20 cm x 20 cm</p>
+              <div className='item-stock'>
+                <i className="fa-solid fa-circle-check"></i>
+                <p>In Stock</p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       </td>
       <td>
         <div className='quantity-div'>

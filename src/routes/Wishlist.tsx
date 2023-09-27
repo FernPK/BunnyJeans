@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import HeaderSection from "../components/HeaderSection"
 import { RecentlyViewedType } from "../types"
 import '../styles/Wishlist.css'
+import { RemoveFromWishlist } from "../LocalStorageFunction"
 import { Link } from "react-router-dom"
 
 const Wishlist = () => {
@@ -29,7 +30,7 @@ const Wishlist = () => {
           wishlist.map((item, index) => {
             return (
               <div className="wishlist-card" key={index}>
-                <button className="remove-from-wishlist">x</button>
+                <button className="remove-from-wishlist" onClick={() => RemoveFromWishlist(item.id)}>x</button>
                 <Link to={`/products/${item.id}`}>
                 <img src={item.image} alt={item.name}/>
                 <p className='wishlist-card-name'>{item.name}</p>

@@ -2,6 +2,7 @@ import '../styles/ItemCard.css'
 import { Item } from '../types'
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AddToBasket, AddToWishlist, RemoveFromWishlist } from '../LocalStorageFunction';
 
 const NewItemCard = (props: Item) => {
   const [fav, setFav] = React.useState(false)
@@ -20,10 +21,12 @@ const NewItemCard = (props: Item) => {
       setFav(false)
       e.currentTarget.children[0].classList.remove('fa-solid')
       e.currentTarget.children[0].classList.add('fa-regular')
+      RemoveFromWishlist(props.id)
     } else {
       setFav(true)
       e.currentTarget.children[0].classList.remove('fa-regular')
       e.currentTarget.children[0].classList.add('fa-solid')
+      AddToWishlist(props)
     }
   }
 
@@ -32,16 +35,16 @@ const NewItemCard = (props: Item) => {
       <button className='card-fav' onClick={toggleHeart}>
         <i className="fa-regular fa-heart"></i>
       </button>
-      <Link to="/">
+      <Link to={`/products/${props.id}`}>
         { label && <div className='item-card-label'>{label}</div> }
         <div className='card-img'>
           <img src={props.image[0]} alt={props.name} />
         </div>
       </Link>
         <div className='add-to-basket-div'>
-          <button className='add-to-basket'>Add to basket</button>
+          <button className='add-to-basket' onClick={() => AddToBasket(props!)}>Add to basket</button>
         </div>
-      <Link to="/">
+        <Link to={`/products/${props.id}`}>
         <div className='card-info'>
           <p className='card-name'>{props.name}</p>
           <p className='card-price'>${props.price.toFixed(2)}</p>

@@ -98,28 +98,3 @@
   color: var(--pink);
   background: none;
 }
-
-.quantity-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
-
-.quantity-div button {
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 30px;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-}
-
-.quantity {
-  height: 2rem;
-  width: 2rem;
-  font-size: 16px;
-  text-align: center;
-  margin: 0 0.5rem;
-}
