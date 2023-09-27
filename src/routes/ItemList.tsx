@@ -201,9 +201,6 @@ const ItemList = () => {
           <option value="name-A-to-Z">Name (A-Z)</option>
           <option value="name-Z-to-A">Name (Z-A)</option>
         </select>
-        {/* <label htmlFor="">View</label>
-        <button>3</button>
-        <button>4</button> */}
       </div>
       <div className="item-list-body">
         <div className="filter-tool">
