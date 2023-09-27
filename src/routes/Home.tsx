@@ -1,12 +1,11 @@
-// import CollectionHome from "../components/CollectionHome"
+import CollectionsHome from "../components/CollectionsHome"
 import Event from "../components/Event"
-// import NewItem from "../components/NewItem"
 
 const Home = () => {
   return (
     <div>
       <Event />
-      {/* <CollectionHome /> */}
+      <CollectionsHome />
     </div>
   )
 }
