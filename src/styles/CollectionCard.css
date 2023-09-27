@@ -1,0 +1,14 @@
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.collection-card img {
+  width: 100%;
+}
