@@ -19,7 +19,7 @@ export type Collections = {
   desc: string,
 }
 
-export type CartItemType = {
+export type BasketItemType = {
   id: string,
   name: string,
   price: number,

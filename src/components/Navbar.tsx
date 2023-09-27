@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react'
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom'
-import { CartItemType } from '../types'
+import { BasketItemType } from '../types'
 
 const Navbar = () => {
-  const [countCart, setCountCart] = useState(0)
+  const [countBasket, setCountBasket] = useState(0)
   const [countWishlist, setCountWishlist] = useState(0)
 
   useEffect(() => {
-    const cart = localStorage.getItem('cart')
-    if (cart && cart !== "[]") {
-      const cartObj = JSON.parse(cart)
-      setCountCart(cartObj.reduce((acc: number, item: CartItemType) => acc + item.amount, 0))
+    const basket = localStorage.getItem('basket')
+    if (basket && basket !== "[]") {
+      const basketObj = JSON.parse(basket)
+      setCountBasket(basketObj.reduce((acc: number, item: BasketItemType) => acc + item.amount, 0))
     } else {
-      const cartDiv = document.querySelector('.shopping-bag-label') as HTMLDivElement
-      cartDiv.style.display = 'none'
+      const basketDiv = document.querySelector('.shopping-bag-label') as HTMLDivElement
+      basketDiv.style.display = 'none'
     }
 
     const wishlist = localStorage.getItem('wishlist')
@@ -48,9 +48,9 @@ const Navbar = () => {
               <i className="fa-regular fa-heart"></i>
             </div>
           </Link>
-          <Link to="/cart">
+          <Link to="/basket">
             <div className='shopping-bag'>
-              <div className='shopping-bag-label'>{countCart}</div>
+              <div className='shopping-bag-label'>{countBasket}</div>
               <i className="fa-solid fa-bag-shopping"></i>
             </div>
           </Link>

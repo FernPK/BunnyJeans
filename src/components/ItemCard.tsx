@@ -38,8 +38,8 @@ const NewItemCard = (props: Item) => {
           <img src={props.image[0]} alt={props.name} />
         </div>
       </Link>
-        <div className='add-to-cart-div'>
-          <button className='add-to-cart'>Add to cart</button>
+        <div className='add-to-basket-div'>
+          <button className='add-to-basket'>Add to basket</button>
         </div>
       <Link to="/">
         <div className='card-info'>

@@ -27,13 +27,13 @@
   width: 99%;
 }
 
-.add-to-cart-div {
+.add-to-basket-div {
   position: relative;
   margin: 0 0.8rem;
   display: none;
 }
 
-.add-to-cart {
+.add-to-basket {
   position: absolute;
   bottom: 1rem;
   left: 0;
@@ -41,7 +41,7 @@
   border-radius: 8px;
 }
 
-.item-card:hover > .add-to-cart-div{
+.item-card:hover > .add-to-basket-div{
   display: block;
 }
 
