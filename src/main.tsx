@@ -11,6 +11,7 @@ import Collections from './routes/Collections.tsx';
 import ItemList from './routes/ItemList.tsx';
 import ItemDetail from './routes/ItemDetail.tsx';
 import Basket from './routes/Basket.tsx';
+import Wishlist from './routes/Wishlist.tsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         path: "/basket",
         element: <Basket />,
       },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
+      }
     ],
   },
 ]);
