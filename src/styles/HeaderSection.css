@@ -1,0 +1,17 @@
+.header-route {
+  margin-top: 1.5rem;
+  font-size: 14px;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.header-desc {
+  font-weight: 500;
+  width: 50%;
+  display: block;
+  margin: 1rem auto 2rem;
+}
