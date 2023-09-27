@@ -1,0 +1,18 @@
+.collection-card-sub-div {
+  margin: 0 auto;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.collection-card-div {
+  background-color: var(--container);
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .collection-card-sub-div {
+    width: 80vw;
+  }
+}
