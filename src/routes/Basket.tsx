@@ -22,9 +22,9 @@ const Basket = () => {
     <div className='basket-div'>
       <HeaderSection route='Your basket' title='Your Basket' desc={`You have ${
         basket.reduce((acc, item) => acc + item.amount, 0)
-      } item(s) in your basket and your total is $${
+      } item(s) in your basket ( total $${
         basket.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)
-      }`}/>
+      } )`}/>
       {
         basket.length === 0 ? <h2 className='basket-blank'>Your basket is empty</h2> :
         <div className='basket-detail-div'>

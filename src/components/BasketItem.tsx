@@ -34,17 +34,11 @@ function BasketItem(props: BasketItemType) {
   return (
     <tr className='basket-item-row'>
       <td>
-        <Link to={`/products/${props.id}`}>
-          <div className='basket-item'>
-            <img src={props.image} alt={props.name} />
-            <div className='basket-item-detail'>
-              <em className='item-name'>{props.name}</em>
-              <p>Size: 20 cm x 20 cm</p>
-              <div className='item-stock'>
-                <i className="fa-solid fa-circle-check"></i>
-                <p>In Stock</p>
-              </div>
-            </div>
+        <Link to={`/products/${props.id}`} className='basket-item'>
+          <img src={props.image} alt={props.name} />
+          <div className='basket-item-detail'>
+            <em className='item-name'>{props.name}</em>
+            <p>Size: 20 cm x 20 cm</p>
           </div>
         </Link>
       </td>
