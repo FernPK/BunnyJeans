@@ -9,6 +9,7 @@ import {
 import Home from './routes/Home.tsx';
 import Collections from './routes/Collections.tsx';
 import ItemList from './routes/ItemList.tsx';
+import ItemDetail from './routes/ItemDetail.tsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/collections/:collectionName",
         element: <ItemList />,
+      },
+      {
+        path: "/products/:productId",
+        element: <ItemDetail />,
       },
     ],
   },
