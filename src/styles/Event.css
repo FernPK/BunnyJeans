@@ -1,0 +1,11 @@
+.halloween-img img{
+  width: 100%;
+}
+
+.event-items {
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem auto;
+  gap: 1rem;
+}
