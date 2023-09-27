@@ -1,0 +1,76 @@
+nav {
+  display: grid;
+  grid-template-columns: 1fr 50vw 1fr;
+  align-items: center;
+  background-color: var(--container);
+  font-size: 14px;
+  font-weight: 500;
+  height: 5rem;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 16px;
+}
+
+.menu {
+  font-size: 1.4rem;
+}
+
+.menu a {
+  margin: 0 1rem;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f190a0;
+}
+
+.shopping-bag {
+  position: relative;
+}
+
+.shopping-bag-label {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: var(--pink);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wishlist-heart {
+  position: relative;
+}
+
+.wishlist-heart-label {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: var(--pink);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
