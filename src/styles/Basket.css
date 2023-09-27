@@ -1,0 +1,66 @@
+.basket-div {
+  padding: 0 10vw;
+}
+
+.basket-div table {
+  width: 100%;
+}
+
+.basket-div table tr{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  padding: 1rem 0;
+}
+
+.basket-div table thead tr{
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.basket-item-row{
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.basket-div table tbody tr:nth-last-child(-n+3){
+  padding-bottom: 0;
+}
+
+.basket-div table tbody tr:nth-last-child(3){
+  margin-top: 1rem;
+}
+
+.item-detail-col {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-semibold {
+  font-weight: 500;
+}
+
+.basket-blank {
+  display: block;
+  text-align: center;
+  margin: 4rem 0;
+  font-weight: 400;
+}
+
+.basket-detail-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-button {
+  margin: 2rem 0 3rem;
+  align-self: flex-end;
+}

@@ -10,6 +10,7 @@ import Home from './routes/Home.tsx';
 import Collections from './routes/Collections.tsx';
 import ItemList from './routes/ItemList.tsx';
 import ItemDetail from './routes/ItemDetail.tsx';
+import Basket from './routes/Basket.tsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/products/:productId",
         element: <ItemDetail />,
+      },
+      {
+        path: "/basket",
+        element: <Basket />,
       },
     ],
   },
