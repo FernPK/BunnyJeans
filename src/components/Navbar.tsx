@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
         <div className='links'>
           <Link to="/collections">COLLECTIONS</Link>
-          <Link to="/collections/new-in">NEW ✨</Link>
+          <Link to="/collections/new">NEW ✨</Link>
           <Link to="/collections/halloween">HALLOWEEN 🎃</Link>
         </div>
         <div className='menu'>
