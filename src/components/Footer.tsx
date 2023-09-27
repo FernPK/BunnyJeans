@@ -1,9 +1,20 @@
+import React, { useEffect } from 'react'
 import '../styles/Footer.css'
+import RecentlyViewed from './RecentlyViewed'
 
 const Footer = () => {
+  const [exist, setExist] = React.useState<boolean>(false)
+
+  useEffect(() => {
+    const recentlyViewed = localStorage.getItem('recentlyViewed')
+    if (recentlyViewed) {
+      setExist(true)
+    }
+  }, [])
 
   return (
     <div>
+      {exist && <RecentlyViewed />}
       <div className='footer-div'>
         <div className='newsletter'>
           <p className='newsletter-title'>Subscribe to our newsletter</p>
