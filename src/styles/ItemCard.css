@@ -1,0 +1,94 @@
+.item-card {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.item-card-label {
+  display: block;
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  background-color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.item-card:hover{
+  border: 1px solid #e8e8e8;
+}
+
+.item-card:hover > .card-fav{
+  display: block;
+}
+
+.card-img img{
+  width: 99%;
+}
+
+.add-to-cart-div {
+  position: relative;
+  margin: 0 0.8rem;
+  display: none;
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.item-card:hover > .add-to-cart-div{
+  display: block;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  display: inline-block;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars{
+  display: inline-block;
+  color: var(--pink);
+  padding: 2px;
+}
+
+.card-reviews {
+  display: inline-block;
+  margin: 0 0 0 2px;
+}
+
+.card-price {
+  margin-bottom: 4px;
+}
+
+.card-fav{
+  background: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 4px 8px;
+  font-size: 1.5rem;
+  color: rgb(175, 175, 175);
+  border: none;
+  display: none;
+  z-index: 5;
+}
+
+.card-fav:hover{
+  color: var(--pink);
+  background: none;
+}
