@@ -1,0 +1,81 @@
+.item-list-div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 80%;
+}
+
+.sort-tool {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--container);
+  border: 1px solid rgb(241, 241, 241);
+}
+
+.item-list-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.filter-tool {
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0 1rem;
+  width: 20vw;
+}
+
+.price-filter {
+  border: 1px solid rgb(241, 241, 241);
+  padding: 1rem;
+}
+
+.filter-block {
+  border: 1px solid rgb(241, 241, 241);
+  cursor: pointer;
+}
+
+.filter-title {
+  padding: 1.5rem 1rem;
+  margin: 0;
+}
+
+#sort {
+  font-size: 16px;
+  margin-right: 1rem;
+}
+
+label[for="sort"] {
+  margin: 0 0.5rem 0 1rem;
+}
+
+
+.filter-option {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.animal-option-div {
+  display: none;
+  margin: 0 0 1rem 1rem;
+}
+
+.color-option-div {
+  display: none;
+  margin: 0 0 1rem 1rem;
+}
+
+.available-option-div {
+  display: none;
+  margin: 0 0 1rem 1rem;
+}

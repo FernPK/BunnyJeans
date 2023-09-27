@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './routes/Home.tsx';
 import Collections from './routes/Collections.tsx';
+import ItemList from './routes/ItemList.tsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/collections",
         element: <Collections />,
+      },
+      {
+        path: "/collections/:collectionName",
+        element: <ItemList />,
       },
     ],
   },
