@@ -194,12 +194,12 @@ const ItemList = () => {
         <p>{items.length} Items</p>
         <label htmlFor="sort">Sort by</label>
         <select name="sort" id="sort">
-          <option value="recommend">Our Recommendations</option>
-          <option value="newest">Newest In</option>
+          <option value="default">Default</option>
+          <option value="newest">Newest</option>
           <option value="price-low-to-high">Price (High-Low)</option>
           <option value="price-high-to-low">Price (Low-High)</option>
-          <option value="alphabet-A-to-Z">Alphabetically (A-Z)</option>
-          <option value="alphabet-Z-to-A">Alphabetically (Z-A)</option>
+          <option value="name-A-to-Z">Name (A-Z)</option>
+          <option value="name-Z-to-A">Name (Z-A)</option>
         </select>
         {/* <label htmlFor="">View</label>
         <button>3</button>
