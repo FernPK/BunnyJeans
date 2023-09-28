@@ -189,7 +189,7 @@ const ItemList = () => {
 
   return (
     <>
-      <HeaderSection route={`Collection / ${collectionName}`} title={collectionName} desc={collectionDesc}/>
+      <HeaderSection route={`Collections / ${collectionName}`} title={collectionName} desc={collectionDesc}/>
       <div className="sort-tool">
         <p>{items.length} Items</p>
         <label htmlFor="sort">Sort by</label>
