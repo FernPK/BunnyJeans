@@ -12,6 +12,7 @@ import ItemList from './routes/ItemList.tsx';
 import ItemDetail from './routes/ItemDetail.tsx';
 import Basket from './routes/Basket.tsx';
 import Wishlist from './routes/Wishlist.tsx';
+import Search from './routes/Search.tsx';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       }
     ],
   },

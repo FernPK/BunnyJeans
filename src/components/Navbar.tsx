@@ -41,7 +41,9 @@ const Navbar = () => {
           <Link to="/collections/halloween">HALLOWEEN 🎃</Link>
         </div>
         <div className='menu'>
-          <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
+          <Link to="/search">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </Link>
           <Link to="/wishlist">
             <div className='wishlist-heart'>
               <div className='wishlist-heart-label'>{countWishlist}</div>

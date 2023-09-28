@@ -1,0 +1,36 @@
+.collection-card-sub-div {
+  margin: 0 auto;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.item-mini-card-div {
+  background-color: #ffffff;
+  padding: 1.5rem 0;
+}
+
+.search-bar {
+  font-size: 16px;
+  padding: 0.5rem 0.8rem;
+  width: 30vw;
+  margin-left: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid #e8e8e8;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 2px solid var(--pink);
+}
+
+.search-bar-div {
+  margin: 3rem 0 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .collection-card-sub-div {
+    width: 80vw;
+  }
+}
