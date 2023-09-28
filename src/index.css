@@ -71,3 +71,8 @@ hr {
   border: 2px solid var(--pink);
   background-color: #ffffff;
 }
+
+select {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.2rem;
+}

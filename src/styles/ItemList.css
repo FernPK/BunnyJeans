@@ -3,6 +3,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   width: 80%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .sort-tool {
@@ -57,12 +59,15 @@ label[for="sort"] {
 .filter-option {
   display: flex;
   flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 0.4rem 0;
 }
 
 input[type="checkbox"] {
-  margin-right: 0.2rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  margin-right: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .animal-option-div {
