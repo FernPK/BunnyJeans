@@ -46,10 +46,13 @@
   font-weight: 500;
 }
 
-.basket-blank {
+.blank-state {
   display: block;
   text-align: center;
   margin: 10rem 0;
+}
+
+.blank-state h2 {
   font-weight: 400;
 }
 
