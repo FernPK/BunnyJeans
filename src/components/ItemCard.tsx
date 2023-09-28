@@ -3,6 +3,7 @@ import { Item } from '../types'
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AddToBasket, AddToWishlist, RemoveFromWishlist } from '../LocalStorageFunction';
+import toast, { Toaster } from 'react-hot-toast';
 
 const NewItemCard = (props: Item) => {
   const [fav, setFav] = React.useState(false)
@@ -14,6 +15,11 @@ const NewItemCard = (props: Item) => {
     label = 'Best Seller'
   } else if(props.tags.indexOf('New') > -1) {
     label = 'New ✨'
+  }
+
+  const clickAddToBasket = () => {
+    AddToBasket(props!)
+    toast.success('Added to basket!')
   }
 
   const toggleHeart = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -32,6 +38,7 @@ const NewItemCard = (props: Item) => {
 
   return (
     <div className='item-card'>
+      <Toaster />
       <button className='card-fav' onClick={toggleHeart}>
         <i className="fa-regular fa-heart"></i>
       </button>
@@ -42,7 +49,7 @@ const NewItemCard = (props: Item) => {
         </div>
       </Link>
         <div className='add-to-basket-div'>
-          <button className='add-to-basket' onClick={() => AddToBasket(props!)}>Add to basket</button>
+          <button className='add-to-basket' onClick={clickAddToBasket}>Add to basket</button>
         </div>
         <Link to={`/products/${props.id}`}>
         <div className='card-info'>

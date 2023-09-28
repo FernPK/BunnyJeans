@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Item } from '../types'
 import '../styles/ItemDetail.css'
 import { AddToBasket, AddToRecentlyViewed, AddToWishlist, RemoveFromWishlist } from '../LocalStorageFunction'
+import toast, { Toaster } from 'react-hot-toast'
 
 const ItemDetail = () => {
   const param = useParams()
@@ -27,6 +28,16 @@ const ItemDetail = () => {
 
   const selectImage = (image: string) => {
     setImageSelected(image)
+  }
+
+  const clickBuyNow = () => {
+    AddToBasket(item!)
+    window.location.href = '/basket'
+  }
+
+  const clickAddToBasket = () => {
+    AddToBasket(item!)
+    toast.success('Added to basket!')
   }
 
   const getData = async () => {
@@ -59,6 +70,7 @@ const ItemDetail = () => {
 
   return (
     <div className='item-detail-div'>
+      <Toaster />
       <div className='img-preview'>
         {
           item?.image.map((image, index) => {
@@ -66,7 +78,7 @@ const ItemDetail = () => {
               <img key={index} src={image} alt={item.name} onClick={() => selectImage(image)}/>
             )})
         }
-      </div>
+      T</div>
       <div className='item-img'>
         <img src={imageSelected} alt={item?.name} />
       </div>
@@ -101,8 +113,8 @@ const ItemDetail = () => {
         </div>
         <hr />
         <div className='buy-fav'>
-          <button onClick={() => AddToBasket(item!)}>Buy now</button>
-          <button className='secondary-button' onClick={() => AddToBasket(item!)}>Add to basket</button>
+          <button onClick={clickBuyNow}>Buy now</button>
+          <button className='secondary-button' onClick={clickAddToBasket}>Add to basket</button>
         </div>
       </div>
     </div>

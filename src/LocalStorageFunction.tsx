@@ -27,7 +27,7 @@ export const AddToBasket = (item: Item) => {
   } else {
     localStorage.setItem('basket', JSON.stringify([basketItem]));
   }
-  window.location.reload()
+  // window.location.reload()
 }
 
 export const RemoveFromBasket = (id: string) => {
