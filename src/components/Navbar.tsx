@@ -28,37 +28,35 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className='top-bar'>
-      <nav>
-        <div>
-          <Link to="/">
-            <div className="logo">BunnyJeans</div>
-          </Link>
-        </div>
-        <div className='links'>
-          <Link to="/collections">COLLECTIONS</Link>
-          <Link to="/collections/new">NEW ✨</Link>
-          <Link to="/collections/halloween">HALLOWEEN 🎃</Link>
-        </div>
-        <div className='menu'>
-          <Link to="/search">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </Link>
-          <Link to="/wishlist">
-            <div className='wishlist-heart'>
-              <div className='wishlist-heart-label'>{countWishlist}</div>
-              <i className="fa-regular fa-heart"></i>
-            </div>
-          </Link>
-          <Link to="/basket">
-            <div className='shopping-bag'>
-              <div className='shopping-bag-label'>{countBasket}</div>
-              <i className="fa-solid fa-bag-shopping"></i>
-            </div>
-          </Link>
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <div>
+        <Link to="/">
+          <div className="logo">BunnyJeans</div>
+        </Link>
+      </div>
+      <div className='links'>
+        <Link to="/collections">COLLECTIONS</Link>
+        <Link to="/collections/new">NEW ✨</Link>
+        <Link to="/collections/halloween">HALLOWEEN 🎃</Link>
+      </div>
+      <div className='menu'>
+        <Link to="/search">
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </Link>
+        <Link to="/wishlist">
+          <div className='wishlist-heart'>
+            <div className='wishlist-heart-label'>{countWishlist}</div>
+            <i className="fa-regular fa-heart"></i>
+          </div>
+        </Link>
+        <Link to="/basket">
+          <div className='shopping-bag'>
+            <div className='shopping-bag-label'>{countBasket}</div>
+            <i className="fa-solid fa-bag-shopping"></i>
+          </div>
+        </Link>
+      </div>
+    </nav>
   )
 }
 

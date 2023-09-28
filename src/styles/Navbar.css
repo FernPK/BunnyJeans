@@ -5,7 +5,10 @@ nav {
   background-color: var(--container);
   font-size: 14px;
   font-weight: 500;
-  height: 5rem;
+  height: 4.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .links{
@@ -23,12 +26,6 @@ nav {
 
 .menu a {
   margin: 0 1rem;
-}
-
-.top-bar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 .logo {
