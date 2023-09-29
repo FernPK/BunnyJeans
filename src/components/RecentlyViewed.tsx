@@ -16,7 +16,7 @@ const RecentlyViewed = () => {
   return (
     <div className='recently-viewed-div'>
       <hr />
-      <p className='recently-viewed-title'>Recently View</p>
+      <p className='recently-viewed-title'>Recently Viewed</p>
       <div className='recently-viewed-list'>
         {
           recentlyViewed.map((item: RecentlyViewedType) => {
