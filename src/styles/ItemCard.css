@@ -8,7 +8,7 @@
 .item-card-label {
   display: block;
   position: absolute;
-  right: 0;
+  left: 0;
   padding: 0.5rem;
   background-color: #e8e8e8;
   font-size: 14px;
@@ -80,7 +80,7 @@
   padding: 0;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   margin: 4px 8px;
   font-size: 1.5rem;
   color: rgb(175, 175, 175);
@@ -92,4 +92,10 @@
 .card-fav:hover{
   color: var(--pink);
   background: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .card-img img{
+    margin-top: 1rem;
+  }
 }
