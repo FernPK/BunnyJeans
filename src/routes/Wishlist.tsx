@@ -18,7 +18,7 @@ const Wishlist = () => {
 
   return (
     <div>
-      <HeaderSection route="your wishlist" title="Your Wishlist" desc=""/>
+      <HeaderSection route="Your wishlist" title="Your Wishlist" desc=""/>
       {
         wishlist.length === 0 &&
         <div className="blank-state">
