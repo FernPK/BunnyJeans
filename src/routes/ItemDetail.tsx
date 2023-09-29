@@ -78,7 +78,7 @@ const ItemDetail = () => {
               <img key={index} src={image} alt={item.name} onClick={() => selectImage(image)}/>
             )})
         }
-      T</div>
+      </div>
       <div className='item-img'>
         <img src={imageSelected} alt={item?.name} />
       </div>

@@ -31,9 +31,9 @@ const Basket = () => {
           <table>
             <thead>
               <tr>
-                <th className='item-detail-col'>Item details</th>
+                <th className='item-detail-col'>Item</th>
                 <th>Quantity</th>
-                <th className='text-right'>Item Price</th>
+                <th className='text-right'>Price</th>
                 <th className='text-right'>Total</th>
               </tr>
             </thead>
