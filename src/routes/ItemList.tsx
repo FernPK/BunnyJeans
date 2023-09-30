@@ -28,7 +28,7 @@ const ItemList = () => {
   }
 
   const getData = async () => {
-    fetch('/public/data/data.json',
+    fetch('data/data.json',
       {
         headers: {
           'Content-Type': 'application/json',
