@@ -76,3 +76,8 @@ select {
   font-family: 'Montserrat', sans-serif;
   padding: 0.2rem;
 }
+
+.disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}

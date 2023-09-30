@@ -40,6 +40,16 @@ const ItemDetail = () => {
     toast.success('Added to basket!')
   }
 
+  const checkStock = () => {
+    if (item?.stock === 0) {
+      document.querySelectorAll('.buy-add button').forEach((button) => {
+        console.log(button)
+        button.classList.add('disabled')
+        button.setAttribute('disabled', '')
+      })
+    }
+  }
+
   const getData = async () => {
     fetch('/public/data.json',
       {
@@ -66,6 +76,7 @@ const ItemDetail = () => {
 
   useEffect(() => {
     getData()
+    checkStock()
   }, [param])
 
   return (
@@ -112,10 +123,13 @@ const ItemDetail = () => {
           <div className='option'>Standard (Free)</div>
         </div>
         <hr />
-        <div className='buy-fav'>
+        <div className='buy-add'>
           <button onClick={clickBuyNow}>Buy now</button>
           <button className='secondary-button' onClick={clickAddToBasket}>Add to basket</button>
         </div>
+        {
+          item?.stock === 0 ? <p className='text-left'>*** Out of stock ***</p> : <p></p>
+        }
       </div>
     </div>
   )
