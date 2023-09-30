@@ -28,7 +28,7 @@ const Basket = () => {
       {
         basket.length === 0 ? 
           <div className='blank-state'>
-            <h2>Your basket is empty</h2>
+            <p>Your basket is empty</p>
           </div> :
         <div className='basket-detail-div'>
           <table>

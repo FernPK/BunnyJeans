@@ -22,7 +22,7 @@ const Wishlist = () => {
       {
         wishlist.length === 0 &&
         <div className="blank-state">
-          <h2>Your wishlist is empty</h2>
+          <p>Your wishlist is empty</p>
         </div>
       }
       <div className="wishlist-card-div">

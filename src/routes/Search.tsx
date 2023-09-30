@@ -52,7 +52,7 @@ const Search = () => {
           </div>
         </div> :
         <div className="blank-state">
-          <h2>Enter doll's name to search</h2>
+          <p>Enter doll's name to search</p>
         </div>
       }
     </div>
