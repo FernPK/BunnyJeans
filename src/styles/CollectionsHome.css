@@ -1,4 +1,4 @@
-.col-div-1 {
+.col-div {
   display: flex;
   flex-direction: row;
   height: 40rem;
@@ -38,9 +38,8 @@
   margin: 1.5rem 0 0 0;
 }
 
-.col-div-2 {
-  display: flex;
-  flex-direction: row;
-  height: 40rem;
-  margin: 2rem 0;
+@media screen and (max-width: 1280px) {
+  .col-div {
+    height: 30rem;
+  }
 }

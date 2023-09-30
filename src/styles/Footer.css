@@ -67,7 +67,7 @@
   border-radius: 4px;
   font-weight: 600;
   padding: 0.8rem 1.2rem;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 input[type="email"] {
@@ -75,10 +75,10 @@ input[type="email"] {
   border: 1px solid rgb(204, 204, 204);
   padding: 0.5rem 1rem;
   width: 300px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .bottom-nav {
     margin: 0 10%;
     gap: 3rem;

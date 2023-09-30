@@ -3,7 +3,7 @@ import '../styles/CollectionsHome.css'
 const CollectionsHome = () => {
   return (
     <div>
-      <div className='col-div-1'>
+      <div className='col-div'>
         <div className='col-div-img'>
           <img src="farmAnimals.jpg" alt="Farm Animals Collection" />
         </div>
@@ -13,7 +13,7 @@ const CollectionsHome = () => {
           <button>Visit our Farm</button>
         </div>
       </div>
-      <div className='col-div-2'>
+      <div className='col-div'>
         <div className='col-div-info'>
           <p className='col-title-center'>Super Duper Cute</p>
           <p className='col-des-center'>Their big heads are full of love and their little bodies are full of beans. They&apos;re the cutest things you&apos;ll ever see!</p>

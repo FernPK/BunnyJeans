@@ -26,7 +26,10 @@ const Basket = () => {
         basket.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)
       } )`}/>
       {
-        basket.length === 0 ? <h2 className='basket-blank'>Your basket is empty</h2> :
+        basket.length === 0 ? 
+          <div className='blank-state'>
+            <h2>Your basket is empty</h2>
+          </div> :
         <div className='basket-detail-div'>
           <table>
             <thead>
