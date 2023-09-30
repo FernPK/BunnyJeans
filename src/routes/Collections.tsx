@@ -8,7 +8,7 @@ const Collections = () => {
   const [collections, setCollections] = React.useState<Collections[]>([])
 
   const getData = async () => {
-    fetch('data/collections.json',
+    fetch('/public/data/collections.json',
       {
         headers: {
           'Content-Type': 'application/json',
