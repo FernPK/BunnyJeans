@@ -2,12 +2,13 @@ import React, { useEffect } from 'react'
 import '../styles/Event.css'
 import { Item } from '../types'
 import ItemCard from './ItemCard'
+import '/src/data/data.json' 
 
 const Event = () => {
   const [data, setData] = React.useState<Item[]>([])
 
   const getData = async () => {
-    fetch('data/data.json',
+    fetch('/src/data/data.json',
       {
         headers: {
           'Content-Type': 'application/json',

@@ -3,12 +3,13 @@ import { Collections } from '../types'
 import CollectionCard from '../components/CollectionCard'
 import '../styles/Collections.css'
 import HeaderSection from '../components/HeaderSection'
+import '/src/data/collections.json'
 
 const Collections = () => {
   const [collections, setCollections] = React.useState<Collections[]>([])
 
   const getData = async () => {
-    fetch('/public/data/collections.json',
+    fetch('/src/data/collections.json',
       {
         headers: {
           'Content-Type': 'application/json',

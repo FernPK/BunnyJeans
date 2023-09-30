@@ -4,6 +4,8 @@ import { Item, Collections } from "../types"
 import HeaderSection from "../components/HeaderSection"
 import ItemCard from "../components/ItemCard"
 import "../styles/ItemList.css"
+import '/src/data/data.json' 
+import '/src/data/collections.json'
 
 const ItemList = () => {
   const param = useParams()
@@ -28,7 +30,7 @@ const ItemList = () => {
   }
 
   const getData = async () => {
-    fetch('/public/data/data.json',
+    fetch('/src/data/data.json',
       {
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +48,7 @@ const ItemList = () => {
   }
 
   const getCollection = async () => {
-    fetch('/public/data/collections.json',
+    fetch('/src/data/collections.json',
       {
         headers: {
           'Content-Type': 'application/json',
