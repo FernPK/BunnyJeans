@@ -21,7 +21,7 @@ const Event = () => {
           return response.json()
         })
         .then(function(myJson) {
-          // console.log(myJson)
+          console.log(myJson)
           setData(myJson)
         })
   }
@@ -37,6 +37,7 @@ const Event = () => {
       </div>
       <div className='event-items'>
         {
+          data &&
           data
           .filter((item) => {
             return item.tags.indexOf('Halloween') > -1
