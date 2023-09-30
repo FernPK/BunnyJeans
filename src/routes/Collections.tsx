@@ -3,13 +3,12 @@ import { Collections } from '../types'
 import CollectionCard from '../components/CollectionCard'
 import '../styles/Collections.css'
 import HeaderSection from '../components/HeaderSection'
-import '/src/data/collections.json'
 
 const Collections = () => {
   const [collections, setCollections] = React.useState<Collections[]>([])
 
   const getData = async () => {
-    fetch('/src/data/collections.json',
+    fetch('https://bunnyjeans-api.onrender.com/collections',
       {
         headers: {
           'Content-Type': 'application/json',

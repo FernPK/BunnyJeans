@@ -2,14 +2,12 @@ import React, { useEffect } from 'react'
 import { Item } from '../types'
 import ItemMiniCard from '../components/ItemMiniCard'
 import '../styles/Search.css'
-import '/src/data/data.json'
-
 const Search = () => {
   const [searchWord, setSearchWord] = React.useState<string>('')
   const [items, setItems] = React.useState<Item[]>([])
 
   const getData = async () => {
-    fetch('/src/data/data.json',
+    fetch('https://bunnyjeans-api.onrender.com/data',
       {
         headers: {
           'Content-Type': 'application/json',

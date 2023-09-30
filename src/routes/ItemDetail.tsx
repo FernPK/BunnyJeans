@@ -4,7 +4,6 @@ import { Item } from '../types'
 import '../styles/ItemDetail.css'
 import { AddToBasket, AddToRecentlyViewed, AddToWishlist, RemoveFromWishlist } from '../LocalStorageFunction'
 import toast, { Toaster } from 'react-hot-toast'
-import '/src/data/data.json' 
 
 const ItemDetail = () => {
   const param = useParams()
@@ -58,7 +57,7 @@ const ItemDetail = () => {
   }
 
   const getData = async () => {
-    fetch('/src/data/data.json',
+    fetch('https://bunnyjeans-api.onrender.com/data',
       {
         headers: {
           'Content-Type': 'application/json',

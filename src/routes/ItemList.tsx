@@ -4,8 +4,6 @@ import { Item, Collections } from "../types"
 import HeaderSection from "../components/HeaderSection"
 import ItemCard from "../components/ItemCard"
 import "../styles/ItemList.css"
-import '/src/data/data.json' 
-import '/src/data/collections.json'
 
 const ItemList = () => {
   const param = useParams()
@@ -30,7 +28,7 @@ const ItemList = () => {
   }
 
   const getData = async () => {
-    fetch('/src/data/data.json',
+    fetch('https://bunnyjeans-api.onrender.com/data',
       {
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +46,7 @@ const ItemList = () => {
   }
 
   const getCollection = async () => {
-    fetch('/src/data/collections.json',
+    fetch('https://bunnyjeans-api.onrender.com/collections',
       {
         headers: {
           'Content-Type': 'application/json',

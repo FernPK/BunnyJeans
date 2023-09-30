@@ -2,13 +2,12 @@ import React, { useEffect } from 'react'
 import '../styles/Event.css'
 import { Item } from '../types'
 import ItemCard from './ItemCard'
-import '/src/data/data.json' 
 
 const Event = () => {
   const [data, setData] = React.useState<Item[]>([])
 
   const getData = async () => {
-    fetch('/src/data/data.json',
+    fetch('https://bunnyjeans-api.onrender.com/data',
       {
         headers: {
           'Content-Type': 'application/json',
