@@ -20,3 +20,18 @@
 .search-bar-div {
   margin: 3rem 0 2rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .search-bar {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .search-bar {
+    width: 60%;
+  }
+  .search-bar-div {
+    margin: 2rem 0 2rem;
+  }
+}

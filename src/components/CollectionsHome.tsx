@@ -13,14 +13,14 @@ const CollectionsHome = () => {
           <button>Visit our Farm</button>
         </div>
       </div>
-      <div className='col-div'>
+      <div className='col-div col-div-2'>
+        <div className='col-div-img'>
+          <img src="kawaiiFriends.jpg" alt="Kawaii Friends Collection" />
+        </div>
         <div className='col-div-info'>
           <h2 className='col-title-center'>Super Duper Cute</h2>
           <p className='col-des-center'>Their big heads are full of love and their little bodies are full of beans. They&apos;re the cutest things you&apos;ll ever see!</p>
           <button>Meet Kawaii Friends</button>
-        </div>
-        <div className='col-div-img'>
-          <img src="kawaiiFriends.jpg" alt="Kawaii Friends Collection" />
         </div>
       </div>
     </div>

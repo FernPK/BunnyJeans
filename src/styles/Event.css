@@ -16,3 +16,10 @@
     /* grid-template-columns: repeat(3, 1fr); */
   }
 }
+
+@media screen and (max-width: 640px) {
+  .event-items {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

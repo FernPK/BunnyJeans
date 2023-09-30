@@ -98,10 +98,45 @@ nav {
     font-size: 0.75rem;
     font-weight: 500;
   }
+  .menu a {
+    margin: 0 0.8rem;
+  }
 }
+
 
 @media screen and (max-width: 700px) {
   .links {
     font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo menu"
+      "links links";
+    row-gap: 0.8rem;
+    height: fit-content;
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  .menu {
+    grid-area: menu;
+    justify-self: end;
+    padding-right: 1rem;
+  }
+  .logo {
+    grid-area: logo;
+    justify-self: start;
+    width: fit-content;
+    margin-left: 1rem;
+  }
+  .links {
+    grid-area: links;
+  }
+  .menu a {
+    margin: 0 0.6rem;
+    font-size: 1.1rem;
   }
 }

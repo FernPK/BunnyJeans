@@ -131,3 +131,10 @@
     margin: 0 0.4rem;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .card-name {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+}

@@ -70,3 +70,35 @@
   font-size: 1rem;
   padding: 0.5rem 2rem;
 }
+
+@media screen and (max-width: 920px) {
+  .basket-div table {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .basket-div table thead tr{
+    display: none;
+  }
+  .basket-div table tr{
+    grid-template-columns: 1fr 20vw;
+    grid-template-areas: 
+      "basket-item-img-desc basket-item-price"
+      "basket-item-quantity basket-item-total"
+    ;
+    padding: 1rem 0;
+  }
+  .basket-div{
+    padding: 0;
+  }
+  .basket-div table {
+    width: 90%;
+  }
+  .checkout-button {
+    margin: 2rem 0 2rem;
+    align-self: center;
+    width: 90%;
+    box-sizing: border-box;
+  }
+}

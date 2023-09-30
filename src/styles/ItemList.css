@@ -110,3 +110,35 @@ input[type="checkbox"] {
     margin-right: 1rem;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .item-list-body {
+    flex-direction: column;
+    padding: 0;
+  }
+  .item-list-div {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 0 auto;
+  }
+  .filter-tool {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .price-filter {
+    padding: 0 1.5rem;
+  }
+  
+  .filter-title {
+    padding: 0.8rem 1.5rem;
+    margin: 0;
+  }
+  .sort-tool {
+    font-size: 0.75rem;
+  }
+  #sort {
+    font-size: 0.75rem;
+    margin-right: 1rem;
+  }
+}

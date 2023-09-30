@@ -29,11 +29,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div>
-        <Link to="/">
-          <div className="logo">BunnyJeans</div>
-        </Link>
-      </div>
+      <Link to="/">
+        <div className="logo">BunnyJeans</div>
+      </Link>
       <div className='links'>
         <Link to="/collections">COLLECTIONS</Link>
         <Link to="/collections/new">NEW ✨</Link>

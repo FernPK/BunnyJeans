@@ -5,6 +5,10 @@
   margin: 2rem 0;
 }
 
+.col-div-2 {
+  flex-direction: row-reverse;
+}
+
 .col-div-img {
   width: 60vw;
   overflow: hidden;
@@ -50,5 +54,28 @@
   }
   .col-des-center {
     width: 30vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .col-div {
+    flex-direction: column;
+  }
+  .col-div-2 {
+    flex-direction: column;
+  }
+  .col-div-img {
+    width: 100vw;
+  }
+  .col-div-info {
+    width: 100vw;
+    padding-bottom: 1.2rem;
+  }
+  .col-des-center {
+    width: 80%;
+    margin: 1rem;
+  }
+  .col-title-center {
+    margin: 1.5rem 0 0 0;
   }
 }

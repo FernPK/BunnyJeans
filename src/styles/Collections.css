@@ -16,3 +16,9 @@
     width: 80vw;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .collection-card-sub-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

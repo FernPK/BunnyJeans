@@ -31,3 +31,11 @@
     font-size: 0.875rem;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .recently-viewed-list {
+    grid-template-columns: repeat(3, 1fr);
+    height: 180px;
+    overflow: hidden;
+  }
+}

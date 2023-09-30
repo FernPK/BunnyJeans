@@ -33,7 +33,7 @@ function BasketItem(props: BasketItemType) {
 
   return (
     <tr className='basket-item-row'>
-      <td>
+      <td className='basket-item-img-desc'>
         <Link to={`/products/${props.id}`} className='basket-item'>
           <img src={props.image} alt={props.name} />
           <div className='basket-item-detail'>
@@ -42,15 +42,15 @@ function BasketItem(props: BasketItemType) {
           </div>
         </Link>
       </td>
-      <td>
+      <td className='basket-item-quantity'>
         <div className='quantity-div'>
           <button onClick={() => decreaseAmount()}>-</button>
           <input type="text" value={amount} className="quantity" onChange={changeAmount}/>
           <button onClick={() => increaseAmount()}>+</button>
         </div>
       </td>
-      <td className='text-right text-semibold'>${props.price.toFixed(2)}</td>
-      <td className='text-right text-semibold'>${(props.price * props.amount).toFixed(2)}</td>
+      <td className='text-right text-semibold basket-item-price'>${props.price.toFixed(2)}</td>
+      <td className='text-right text-semibold basket-item-total'>${(props.price * props.amount).toFixed(2)}</td>
     </tr>
   )
 }
