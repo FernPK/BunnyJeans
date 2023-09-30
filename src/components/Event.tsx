@@ -7,7 +7,7 @@ const Event = () => {
   const [data, setData] = React.useState<Item[]>([])
 
   const getData = async () => {
-    fetch('../data.json',
+    fetch('/public/data/data.json',
       {
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const Event = () => {
   return (
     <>
       <div className="halloween-img">
-        <img src="/halloween.png" alt="halloween-event" />
+        <img src="images/halloween.png" alt="halloween-event" />
       </div>
       <div className='event-items'>
         {

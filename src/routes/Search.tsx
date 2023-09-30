@@ -8,7 +8,7 @@ const Search = () => {
   const [items, setItems] = React.useState<Item[]>([])
 
   const getData = async () => {
-    fetch('../data.json',
+    fetch('/public/data/data.json',
       {
         headers: {
           'Content-Type': 'application/json',

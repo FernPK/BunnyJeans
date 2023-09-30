@@ -57,7 +57,7 @@ const ItemDetail = () => {
   }
 
   const getData = async () => {
-    fetch('../data.json',
+    fetch('/public/data/data.json',
       {
         headers: {
           'Content-Type': 'application/json',

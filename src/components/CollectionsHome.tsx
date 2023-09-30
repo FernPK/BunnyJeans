@@ -5,7 +5,7 @@ const CollectionsHome = () => {
     <div>
       <div className='col-div'>
         <div className='col-div-img'>
-          <img src="farmAnimals.jpg" alt="Farm Animals Collection" />
+          <img src="images/farmAnimals.jpg" alt="Farm Animals Collection" />
         </div>
         <div className='col-div-info'>
           <h2 className='col-title-center'>B-I-N-G-O</h2>
@@ -15,7 +15,7 @@ const CollectionsHome = () => {
       </div>
       <div className='col-div col-div-2'>
         <div className='col-div-img'>
-          <img src="kawaiiFriends.jpg" alt="Kawaii Friends Collection" />
+          <img src="images/kawaiiFriends.jpg" alt="Kawaii Friends Collection" />
         </div>
         <div className='col-div-info'>
           <h2 className='col-title-center'>Super Duper Cute</h2>
