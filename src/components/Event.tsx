@@ -7,7 +7,7 @@ const Event = () => {
   const [data, setData] = React.useState<Item[]>([])
 
   const getData = async () => {
-    fetch('data.json',
+    fetch('../data.json',
       {
         headers: {
           'Content-Type': 'application/json',
