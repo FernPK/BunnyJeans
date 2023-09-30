@@ -84,3 +84,29 @@ input[type="checkbox"] {
   display: none;
   margin: 0 0 1rem 1rem;
 }
+
+@media screen and (max-width: 1280px) {
+  .item-list-div {
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+  }
+  .filter-tool {
+    width: 30vw;
+    font-size: 0.875rem;
+  }
+  .price-filter {
+    padding: 0.8rem;
+  }
+  
+  .filter-title {
+    padding: 1.2rem 0.8rem;
+    margin: 0;
+  }
+  .sort-tool {
+    font-size: 0.875rem;
+  }
+  #sort {
+    font-size: 0.875rem;
+    margin-right: 1rem;
+  }
+}

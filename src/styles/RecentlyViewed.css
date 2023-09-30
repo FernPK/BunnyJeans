@@ -25,3 +25,9 @@
     margin: 2rem 10vw;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .recently-viewed-title{
+    font-size: 0.875rem;
+  }
+}

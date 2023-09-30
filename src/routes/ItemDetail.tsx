@@ -40,12 +40,18 @@ const ItemDetail = () => {
     toast.success('Added to basket!')
   }
 
-  const checkStock = () => {
+  const checkStock = (item: Item) => {
     if (item?.stock === 0) {
       document.querySelectorAll('.buy-add button').forEach((button) => {
         console.log(button)
         button.classList.add('disabled')
         button.setAttribute('disabled', '')
+      })
+    }
+    else {
+      document.querySelectorAll('.buy-add button').forEach((button) => {
+        button.classList.remove('disabled')
+        button.removeAttribute('disabled')
       })
     }
   }
@@ -69,6 +75,7 @@ const ItemDetail = () => {
               setItems(item)
               AddToRecentlyViewed(item)
               setImageSelected(item.image[0])
+              checkStock(item)
             }
           })
         })
@@ -76,22 +83,23 @@ const ItemDetail = () => {
 
   useEffect(() => {
     getData()
-    checkStock()
   }, [param])
 
   return (
     <div className='item-detail-div'>
       <Toaster />
-      <div className='img-preview'>
-        {
-          item?.image.map((image, index) => {
-            return (
-              <img key={index} src={image} alt={item.name} onClick={() => selectImage(image)}/>
-            )})
-        }
-      </div>
-      <div className='item-img'>
-        <img src={imageSelected} alt={item?.name} />
+      <div className='item-img-div'>
+        <div className='img-preview'>
+          {
+            item?.image.map((image, index) => {
+              return (
+                <img key={index} src={image} alt={item.name} onClick={() => selectImage(image)}/>
+              )})
+          }
+        </div>
+        <div className='item-img'>
+          <img src={imageSelected} alt={item?.name} />
+        </div>      
       </div>
       <div className='item-desc'>
         <div className='flex-row-between'>

@@ -43,7 +43,7 @@ const Footer = () => {
             <a href="#">Instagram</a>
             <a href="#">Twitter</a>
           </div>
-          <div>
+          <div className='img-credit'>
             <p className="bottom-nav-title">Images Credit</p>
             <a href="https://www.freepik.com/free-vector/flat-halloween-horizontal-sale-banners-set_31692593.htm" target='_blank'>Halloween banner - Freepik</a>
             <a href="https://www.freepik.com/free-vector/cute-halloween-characters-collection_2897442.htm" target='_blank'>Halloween Collection - Freepik</a>

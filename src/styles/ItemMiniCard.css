@@ -27,3 +27,12 @@
 .recently-viewed-item:hover{
   border: 1px solid #e8e8e8;
 }
+
+@media screen and (max-width: 700px) {
+  .recently-viewed-name {
+    font-size: 0.875rem;
+  }
+  .recently-viewed-price {
+    font-size: 0.875rem;
+  }
+}

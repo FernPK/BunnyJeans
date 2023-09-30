@@ -1,6 +1,6 @@
 .header-route {
   margin-top: 1.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .header-title {
@@ -14,4 +14,14 @@
   width: 50%;
   display: block;
   margin: 1rem auto 2rem;
+}
+
+@media screen and (max-width: 920px) {
+  .header-title {
+    font-size: 1.7rem;
+  }
+  .header-desc {
+    width: 70%;
+    font-size: 0.875rem;
+  }
 }

@@ -11,7 +11,7 @@
   left: 0;
   padding: 0.5rem;
   background-color: #e8e8e8;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -97,5 +97,37 @@
 @media screen and (max-width: 1280px) {
   .card-img img{
     margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-name {
+    font-size: 1rem;
+    margin: 0 0 1.5px 0;
+  }
+  .stars{
+    font-size: 0.875rem;
+  }
+  
+  .card-reviews {
+    font-size: 0.875rem;
+  }
+  
+  .card-price {
+    font-size: 0.875rem;
+  }
+
+  .item-card-label {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  .card-fav{
+    font-size: 1.3rem;
+  }
+  .add-to-basket {
+    font-size: 0.75rem;
+  }
+  .add-to-basket-div {
+    margin: 0 0.4rem;
   }
 }
