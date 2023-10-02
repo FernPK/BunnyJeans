@@ -3,8 +3,6 @@ BunnyJeans is a cute doll shop website that has many collections of dolls. Find 
 
 [See live demo 🎃](https://bunnyjeans.vercel.app/)
 
-*There are still a few problems with the deployed website.
-
 ### Available functions
 * search by doll's name
 * filter by animal, color, availability (stock)
